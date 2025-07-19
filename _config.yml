@@ -1,0 +1,58 @@
+# Jekyll configuration for modern personal website
+
+# Site settings
+title: Rajeev Jha - Android Engineer
+description: >-
+  Personal website of Rajeev Jha, Android engineer with 6 years of experience. Showcasing skills, projects, and blogs.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://rjvjha.github.io" # the base hostname & protocol for your site
+
+# Author settings
+author:
+  name: Rajeev Jha
+  email: rjvjha1996@gmail.com
+  github: rjvjha
+  linkedin: rjvjha
+  twitter: DigiRjv96
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# Permalinks
+permalink: pretty
+
+# Exclude from processing
+exclude:
+  - node_modules
+  - vendor
+  - README.md
+  - LICENSE.md
+  - gulpfile.js
+  - package.json
+  - package-lock.json
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Rajeev Jha"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+      author: "Rajeev Jha"
